@@ -1,4 +1,11 @@
 var app = {
+	showAlert: function (message, title) {
+		if (navigator.notification) {
+			navigator.notification.alert(message, null, title, 'OK');
+		} else {
+			alert(title ? (title + ": " + message) : message);
+		}
+	},
 
     findByName: function() {
         console.log('findByName');
@@ -13,10 +20,13 @@ var app = {
         });
     },
 
-    initialize: function() {
+	initialize: function() {
+    var self = this;
         this.store = new WebSqlStore();
-        $('.search-key').on('keyup', $.proxy(this.findByName, this));
-    }
+        self.showAlert('Store Initialized', 'Info');
+    });
+    $('.search-key').on('keyup', $.proxy(this.findByName, this));
+}
 
 };
 
