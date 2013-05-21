@@ -24,7 +24,7 @@ var app = {
 		this.homeTpl = Handlebars.compile($("#home-tpl").html());
 		this.employeeLiTpl = Handlebars.compile($("#employee-li-tpl").html());
 		var self = this;
-		this.store = new WebSqlStore(function() {
+		this.store = new MemoryStore(function() {
 		   // self.showAlert('Store Initialized', 'Info');
 			self.renderHomeView();
 		});
