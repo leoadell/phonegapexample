@@ -16,12 +16,11 @@ var HomeView = function(store) {
         this.el = $('<div/>');
         this.el.on('keyup', '.search-key', this.findByName);
     };
-HomeView.template = Handlebars.compile($("#home-tpl").html());
-HomeView.liTemplate = Handlebars.compile($("#employee-li-tpl").html());
 
- 
     this.initialize(); 
 
 };
 
+HomeView.template = Handlebars.compile($("#home-tpl").html());
+HomeView.liTemplate = Handlebars.compile($("#employee-li-tpl").html());
 
