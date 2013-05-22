@@ -11,11 +11,12 @@ var HomeView = function(store) {
 				self.iscroll = new iScroll($('.scroll', self.el)[0], {hScrollbar: false, vScrollbar: false });
 			}
 		});
-	},
+	};
+
 	this.render= function() {
 		this.el.html(HomeView.template());
 		return this;
-	},
+	};
 	
 	this.initialize = function() {
         // Define a div wrapper for the view. The div wrapper is used to attach events.
