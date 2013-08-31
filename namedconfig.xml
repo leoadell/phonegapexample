@@ -3,7 +3,7 @@
         xmlns:gap   = "http://phonegap.com/ns/2.9.0"
         id          = "org.coenraets.employeedirectory"
         versionCode = "10"
-        version     = "2.7.0">
+        version     = "2.9.0">
  
     <name>Employee Directory</name>
  
